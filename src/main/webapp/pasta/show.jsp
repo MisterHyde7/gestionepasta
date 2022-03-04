@@ -28,7 +28,7 @@
 				<div class='card-header'>
 					<h5>Visualizza dettaglio</h5>
 				</div>
-				<% Pasta pastaInPagina = (Pasta)request.getAttribute("visualizza_pasta_attr"); %>
+				<% Pasta pastaInPagina = (Pasta)request.getAttribute("visualizzaPasta"); %>
 
 
 				<div class='card-body'>

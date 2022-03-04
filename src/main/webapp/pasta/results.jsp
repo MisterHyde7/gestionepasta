@@ -78,11 +78,11 @@
 									<td><%=item.getPrezzo()%></td>
 									<td><%=item.getDataScadenza() != null ? new SimpleDateFormat("dd/MM/yyyy").format(item.getDataScadenza()) : "N.D."%></td>
 									<td><a class="btn  btn-sm btn-outline-secondary"
-										href="ExecuteVisualizzaPastaServlet?idArticolo=<%=item.getId()%>">Visualizza</a>
+										href="ExecuteVisualizzaPastaServlet?idPasta=<%=item.getId()%>">Visualizza</a>
 										<a class="btn  btn-sm btn-outline-primary ml-2 mr-2"
-										href="PrepareEditPastaServlet?idArticolo=<%=item.getId()%>"">Edit</a>
+										href="PrepareEditPastaServlet?idPasta=<%=item.getId()%>"">Edit</a>
 										<a class="btn btn-outline-danger btn-sm"
-										href="PrepareDeletePastaServlet?idArticolo=<%=item.getId()%>">Delete</a>
+										href="PrepareDeletePastaServlet?idPasta=<%=item.getId()%>">Delete</a>
 									</td>
 								</tr>
 								<%
