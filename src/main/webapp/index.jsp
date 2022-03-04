@@ -64,8 +64,8 @@
 					<p class="col-md-8 fs-4">Using a series of utilities, you can
 						create this jumbotron, just like the one in previous versions of
 						Bootstrap.</p>
-					<a class="btn btn-primary btn-lg" href="ListArticoliServlet">Lista
-						Elementi</a>
+					<a class="btn btn-primary btn-lg" href="ListPastaServlet">Lista
+						Pasta</a>
 				</div>
 			</div>
 
@@ -79,7 +79,7 @@
 						<svg class="bi" width="1em" height="1em">
 							<use xlink:href="#collection" /></svg>
 					</div>
-					<h2>Lista tipi di pasta</h2>
+					<h2>Lista Tipi Di Pasta</h2>
 					<p>Paragraph of text beneath the heading to explain the
 						heading. We'll add onto it with another sentence and probably just
 						keep going until we run out of words.</p>
@@ -97,8 +97,8 @@
 					<p>Paragraph of text beneath the heading to explain the
 						heading. We'll add onto it with another sentence and probably just
 						keep going until we run out of words.</p>
-					<a href="PrepareInsertPastaServlet" class="icon-link"> Vai
-						alla funzionalità <svg class="bi" width="1em" height="1em">
+					<a href="PrepareInsertPastaServlet" class="icon-link"> Vai alla
+						funzionalità <svg class="bi" width="1em" height="1em">
 							<use xlink:href="#chevron-right" /></svg>
 					</a>
 				</div>
@@ -107,12 +107,12 @@
 						<svg class="bi" width="1em" height="1em">
 							<use xlink:href="#toggles2" /></svg>
 					</div>
-					<h2>Altra Funzione</h2>
+					<h2>Cerca Pasta</h2>
 					<p>Paragraph of text beneath the heading to explain the
 						heading. We'll add onto it with another sentence and probably just
 						keep going until we run out of words.</p>
-					<a href="#" class="icon-link"> Vai alla funzionalità <svg
-							class="bi" width="1em" height="1em">
+					<a href="SearchPastaServlet" class="icon-link"> Vai alla
+						funzionalità <svg class="bi" width="1em" height="1em">
 							<use xlink:href="#chevron-right" /></svg>
 					</a>
 				</div>
