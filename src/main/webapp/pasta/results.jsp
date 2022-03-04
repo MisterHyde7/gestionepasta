@@ -53,7 +53,7 @@
 					<h5>Lista dei risultati</h5>
 				</div>
 				<div class='card-body'>
-					<a class="btn btn-primary " href="PrepareInsertArticoloServlet">Add
+					<a class="btn btn-primary " href="PrepareInsertPastaServlet">Add
 						New</a>
 
 					<div class='table-responsive'>

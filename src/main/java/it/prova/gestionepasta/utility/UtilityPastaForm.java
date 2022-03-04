@@ -13,7 +13,7 @@ import it.prova.gestionepasta.model.Pasta;
 public class UtilityPastaForm {
 
 	public static Pasta createPastaFromParams(String marcaInputParam, String descrizioneInputParam,
-			String codiceInputStringParam, String dataScadenzaStringParam, String prezzoStringParam) {
+			String codiceInputStringParam, String prezzoStringParam, String dataScadenzaStringParam) {
 
 		Pasta result = new Pasta(marcaInputParam, descrizioneInputParam, codiceInputStringParam);
 
@@ -25,7 +25,7 @@ public class UtilityPastaForm {
 		return result;
 	}
 
-	public static boolean validateArticoloBean(Pasta pastaToBeValidated) {
+	public static boolean validatePastaBean(Pasta pastaToBeValidated) {
 		// prima controlliamo che non siano vuoti i parametri
 		if (StringUtils.isBlank(pastaToBeValidated.getMarca())
 				|| StringUtils.isBlank(pastaToBeValidated.getDescrizione())

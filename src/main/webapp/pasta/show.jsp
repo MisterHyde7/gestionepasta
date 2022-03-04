@@ -41,6 +41,11 @@
 						<dt class="col-sm-3 text-right">Descrizione:</dt>
 						<dd class="col-sm-9"><%=pastaInPagina.getDescrizione() %></dd>
 					</dl>
+					
+					<dl class="row">
+						<dt class="col-sm-3 text-right">Codice:</dt>
+						<dd class="col-sm-9"><%=pastaInPagina.getCodice() %></dd>
+					</dl>
 
 					<dl class="row">
 						<dt class="col-sm-3 text-right">Prezzo:</dt>
