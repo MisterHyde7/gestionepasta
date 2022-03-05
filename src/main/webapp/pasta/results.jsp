@@ -3,6 +3,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,26 +69,24 @@
 								</tr>
 							</thead>
 							<tbody>
-								<%
-								List<Pasta> listaPasta = (List<Pasta>) request.getAttribute("listaPastaAttribute");
-								for (Pasta item : listaPasta) {
-								%>
+							
+								<c:forEach var="pasta" items="${listaPastaAttribute}">
+								
 								<tr>
-									<td><%=item.getMarca()%></td>
-									<td><%=item.getDescrizione()%></td>
-									<td><%=item.getPrezzo()%></td>
-									<td><%=item.getDataScadenza() != null ? new SimpleDateFormat("dd/MM/yyyy").format(item.getDataScadenza()) : "N.D."%></td>
+									<td><c:out value="${pasta.marca }"></c:out></td>
+									<td><c:out value="${pasta.descrizione }"></c:out></td>
+									<td><c:out value="${pasta.prezzo }"></c:out></td>
+									<td><c:out value="${pasta.dataScadenza }"></c:out></td>
 									<td><a class="btn  btn-sm btn-outline-secondary"
-										href="ExecuteVisualizzaPastaServlet?idPasta=<%=item.getId()%>">Visualizza</a>
+										href="ExecuteVisualizzaPastaServlet?idPasta=${pasta.id}">Visualizza</a>
 										<a class="btn  btn-sm btn-outline-primary ml-2 mr-2"
-										href="PrepareEditPastaServlet?idPasta=<%=item.getId()%>"">Edit</a>
+										href="PrepareEditPastaServlet?idPasta=${pasta.id}">Edit</a>
 										<a class="btn btn-outline-danger btn-sm"
-										href="PrepareDeletePastaServlet?idPasta=<%=item.getId()%>">Delete</a>
+										href="PrepareDeletePastaServlet?idPasta=${pasta.id}">Delete</a>
 									</td>
 								</tr>
-								<%
-								}
-								%>
+								
+								</c:forEach>
 
 							</tbody>
 						</table>

@@ -2,6 +2,7 @@
 <%@page import="it.prova.gestionepasta.model.Pasta"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,33 +29,33 @@
 				<div class='card-header'>
 					<h5>Visualizza dettaglio</h5>
 				</div>
-				<% Pasta pastaInPagina = (Pasta)request.getAttribute("visualizzaPasta"); %>
-
+				
+				<c:set var="pastaInPagina" value="${visualizzaPasta }"></c:set>
 
 				<div class='card-body'>
 					<dl class="row">
 						<dt class="col-sm-3 text-right">Marca</dt>
-						<dd class="col-sm-9"><%=pastaInPagina.getMarca() %></dd>
+						<dd class="col-sm-9"><c:out value="${pastaInPagina.marca }"></c:out></dd>
 					</dl>
 
 					<dl class="row">
 						<dt class="col-sm-3 text-right">Descrizione:</dt>
-						<dd class="col-sm-9"><%=pastaInPagina.getDescrizione() %></dd>
+						<dd class="col-sm-9"><c:out value="${pastaInPagina.descrizione }"></c:out></dd>
 					</dl>
 					
 					<dl class="row">
 						<dt class="col-sm-3 text-right">Codice:</dt>
-						<dd class="col-sm-9"><%=pastaInPagina.getCodice() %></dd>
+						<dd class="col-sm-9"><c:out value="${pastaInPagina.codice }"></c:out></dd>
 					</dl>
 
 					<dl class="row">
 						<dt class="col-sm-3 text-right">Prezzo:</dt>
-						<dd class="col-sm-9"><%=pastaInPagina.getPrezzo() %></dd>
+						<dd class="col-sm-9"><c:out value="${pastaInPagina.prezzo }"></c:out></dd>
 					</dl>
 
 					<dl class="row">
 						<dt class="col-sm-3 text-right">Data di Scadenza:</dt>
-						<dd class="col-sm-9"><%=pastaInPagina.getDataScadenza()!=null? new SimpleDateFormat("dd/MM/yyyy").format(pastaInPagina.getDataScadenza()):"N.D."  %></dd>
+						<dd class="col-sm-9"><c:out value="${pastaInPagina.dataScadenza }"></c:out></dd>
 					</dl>
 
 				</div>
