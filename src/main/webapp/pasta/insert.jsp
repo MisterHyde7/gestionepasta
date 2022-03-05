@@ -61,7 +61,7 @@
 								
 								<div class="col-md-6">
 									<label for="codice" class="form-label">Codice <span class="text-danger">*</span></label>
-									<input type="text" name="codice" id="codice" class="form-control" placeholder="Inserire la descrizione"  
+									<input type="text" name="codice" id="codice" class="form-control" placeholder="Inserire il codice"  
 										value="<%=pastaInPagina.getCodice()!=null?pastaInPagina.getCodice():"" %>" required>
 								</div>
 							

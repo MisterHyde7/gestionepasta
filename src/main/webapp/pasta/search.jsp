@@ -4,15 +4,12 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<<head>
+ <head>
 	 
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="../header.jsp" />
 	   
-	   <title>Modifica Pasta</title>
+	   <title>Ricerca Tipo di Pasta</title>
 	 </head>
 	   <body class="d-flex flex-column h-100">
 	   
@@ -39,18 +36,13 @@
 			  
 			  <div class='card'>
 				    <div class='card-header'>
-				        <h5>Modifica pasta</h5> 
+				        <h5>Cerca tipo di pasta</h5> 
 				    </div>
 				    <div class='card-body'>
 		
-							<h6 class="card-title">Modifica i campi di interesse</h6>
-		
-		
-							<form method="post" action="ExecuteEditPastaServlet" class="row g-3" novalidate="novalidate">
+							<form method="post" action="ExecuteSearchPastaServlet" class="row g-3" novalidate="novalidate">
 							
-								<% Pasta pastaInPagina = (Pasta)request.getAttribute("pastaDaModificare"); %>
-								
-								<input type="hidden" name="idPasta" value="<%=pastaInPagina.getId() %>">
+								<% Pasta pastaInPagina = (Pasta)request.getAttribute("searchPasta"); %>
 							
 								<div class="col-md-6">
 									<label for="marca" class="form-label">Marca</label>
@@ -105,5 +97,4 @@
 			<!-- Footer -->
 			<jsp:include page="../footer.jsp" />
 	  </body>
-</body>
 </html>

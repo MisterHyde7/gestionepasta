@@ -1,5 +1,6 @@
 package it.prova.gestionepasta.service;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -127,7 +128,25 @@ public class PastaServiceImpl implements PastaService {
 	}
 
 	public List<Pasta> findByExample(Pasta input) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+
+		EntityManager entityManager = LocalEntityManagerFactoryListener.getEntityManager();
+
+		try {
+			// uso l'injection per il dao
+			pastaDao.setEntityManager(entityManager);
+
+			if (input.getPrezzo() == null)
+				input.setPrezzo(0);
+			if(input.getDataScadenza()==null)
+				input.setDataScadenza(new Date());
+
+			return pastaDao.listaByExample(input);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			LocalEntityManagerFactoryListener.closeEntityManager(entityManager);
+		}
 	}
 }
